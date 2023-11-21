@@ -1,8 +1,63 @@
 @import 'variables'
 @import 'reset'
+@import 'utilities'
 
 body
   height: 100vh
 
 body *
   font-family: 'Lato', sans-serif
+
+#main-banner
+  height: 85vh
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/office.jpg') no-repeat center/cover
+
+  .nav-container
+    display: flex
+    justify-content: space-between
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 1.5rem 2rem
+    background: $black
+    z-index: 1
+
+    .brand
+      color: $light-color
+      font-size: 2rem
+      @extend %main-hover
+
+    &-navbar
+      display: flex
+      align-items: center
+      height: 100%
+
+      li
+        margin: 5px 10px
+
+        a
+          color: $light-color
+          @extend %main-hover
+
+    .fas.fa-bars
+      font-size: 2rem
+      color: #ffffff
+      display: none
+
+.title-container
+  color: $light-color
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+
+  h2
+    font-size: 3rem
+    @extend %title-text-shadow
+
+  h1
+    font-size: 4rem
+    margin-top: 1rem
+    @extend %title-text-shadow
